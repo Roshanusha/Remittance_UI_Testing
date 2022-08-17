@@ -24,6 +24,7 @@ class Users_page(Base_page):
         self.usr_Email_click_xpath = "//input[@placeholder='Email']"
         self.usr_cntycode_click_xpath = "//span[@ng-reflect-ng-class='[object Object]']"
         self.usr_cntycode_search_click_xpath = "(//input[@autocomplete='off'])[1]"
+        self.usr_cntycode_searchbox_xpath = "//ul[@role='listbox']"
         self.usr_Ph_no_click_xpath = "//input[@placeholder='1234567890']"
         self.usr_RemitCenter_click_xpath = "//select[@formcontrolname='centerId']"
         self.usr_Role_click_xpath = "//select[@formcontrolname='role']"
@@ -69,13 +70,13 @@ class Users_page(Base_page):
         self.driver.find_element(By.XPATH, self.usr_Email_click_xpath).send_keys(Keys.CONTROL, 'a', Keys.BACKSPACE)
         self.driver.find_element(By.XPATH, self.usr_Email_click_xpath).send_keys(Email)
 
-    #driver.find_element(By.XPATH, "//p-dropdownitem[@ng-reflect-option='[object Object]']")
+    # driver.find_element(By.XPATH, "//p-dropdownitem[@ng-reflect-option='[object Object]']")
     def usr_country_code(self):
         self.driver.find_element(By.XPATH, self.usr_cntycode_click_xpath).click()
         self.driver.find_element(By.XPATH,   self.usr_cntycode_search_click_xpath).click()
         # print
         self.driver.find_element(By.XPATH, self.usr_cntycode_search_click_xpath).send_keys("91")
-        code_search_results = self.driver.find_elements(By.XPATH, self.usr_cntycode_search_click_xpath)
+        code_search_results = self.driver.find_elements(By.XPATH, self.usr_cntycode_searchbox_xpath)
         print(code_search_results)
         print(len(code_search_results))
         for results in code_search_results:
