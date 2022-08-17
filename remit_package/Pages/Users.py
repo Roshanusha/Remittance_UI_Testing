@@ -210,7 +210,7 @@ class Users_page(Base_page):
         self.driver.find_element(By.XPATH,   self.usr_cntycode_search_click_xpath).click()
         # print
         self.driver.find_element(By.XPATH, self.usr_cntycode_search_click_xpath).send_keys("91")
-        code_search_results = self.driver.find_elements(By.XPATH, self.usr_cntycode_search_click_xpath)
+        code_search_results = self.driver.find_elements(By.XPATH, self.usr_cntycode_searchbox_xpath)
         print(code_search_results)
         print(len(code_search_results))
         for results in code_search_results:
