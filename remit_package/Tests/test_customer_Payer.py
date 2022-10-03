@@ -2,7 +2,7 @@ import self
 from selenium.webdriver.common.keys import Keys
 
 from remit_package.Pages.login_page import LoginPage
-from remit_package.Pages.Customers_payer import  Customers_payer_page
+from remit_package.Pages.Customers_payer import Customers_payer_page
 from remit_package.Utilities.BaseClass import BaseClass
 from remit_package.Pages.base_page import Base_page
 from selenium.webdriver.support import expected_conditions as EC
@@ -28,7 +28,6 @@ class Testmain(BaseClass):
         cust_ACP = Customers_payer_page(self.driver)
 
     # goto/click customers
-        cust_ACP.customers_click()
         time.sleep(3)
 
         cust_ACP.add_customer_click()

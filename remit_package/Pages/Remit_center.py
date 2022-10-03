@@ -77,7 +77,7 @@ class Remittance_center(Base_page):
         assert self.driver.find_element(By.XPATH,self.S_id_xpath).get_attribute("value") == "28"
         time.sleep(3)
         ele = self.wait_for((By.XPATH, "//tbody/tr[1]/td[1]")).text
-        assert ele == "00028"
+        assert ele == "00020"
         self.driver.find_element(By.XPATH, self.S_id_xpath).send_keys(Keys.CONTROL, 'a', Keys.BACKSPACE)
 
     def s_searchbars1(self, ss_centername_bar):

@@ -6,6 +6,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 def pytest_addoption(parser):
+
+
+
     parser.addoption(
         "--browser_name", action="store", default="chrome"
     )
