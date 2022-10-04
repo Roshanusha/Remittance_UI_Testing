@@ -28,6 +28,7 @@ class Testmain(BaseClass):
         cust_ACP = Customers_payer_page(self.driver)
 
     # goto/click customers
+        cust_ACP.customers_click()
         time.sleep(3)
 
         cust_ACP.add_customer_click()

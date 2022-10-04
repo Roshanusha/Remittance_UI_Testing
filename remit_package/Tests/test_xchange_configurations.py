@@ -85,8 +85,8 @@ class Testmain(BaseClass):
         XC_config.eValid_XC_s_rate_sbars("30")
         time.sleep(5)
 
-        XC_config.Valid_XC_SetDefault()
-        time.sleep(5)
+        #XC_config.Valid_XC_SetDefault()
+        #time.sleep(5)
 
         XC_config.XC_Delete_click()
         time.sleep(3)
