@@ -37,7 +37,7 @@ class Test_1_main(BaseClass):
         time.sleep(5)
 
         # Small search Bars
-        remit.s_searchbars("28")
+        remit.s_searchbars("20")
         time.sleep(5)
 
         remit.s_searchbars1("Boston")
