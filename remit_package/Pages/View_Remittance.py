@@ -14,7 +14,7 @@ class View_remit_page(Base_page):
         self.wait = WebDriverWait(self.driver, 10)
 
     # all clicks
-        self.remittance_click_xpath = "//a[@id='navbarDropdownRemit']"
+        self.remittance_click_xpath = "//body/app-root/nav/div/ul/li[2]/a[1]"
         self.vr_click_xpath = "//a[@routerlink='view-remitances']" # view Remittance
         self.vr_select_center_xpath = "//div[@ng-reflect-tooltip-position='right']//div[@ng-reflect-ng-class='[object Object]']"
         self.vr_from_date_xpath = "//input[@placeholder='Start']"

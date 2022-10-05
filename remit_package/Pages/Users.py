@@ -26,7 +26,7 @@ class Users_page(Base_page):
         self.usr_cntycode_search_click_xpath = "(//input[@autocomplete='off'])[1]"
         self.usr_cntycode_searchbox_xpath = "//ul[@role='listbox']"
         self.usr_Ph_no_click_xpath = "//input[@placeholder='1234567890']"
-        self.usr_RemitCenter_click_xpath = "//select[@formcontrolname='centerId']"
+        self.usr_RemitCenter_click_xpath = "(//select[@formcontrolname='centerId'])[1]"
         self.usr_Role_click_xpath = "//select[@formcontrolname='role']"
         self.usr_Password_click_xpath = "//input[@placeholder='Password']"
         self.usr_save_button_click_xpath = "//button[@type='submit']"
@@ -91,9 +91,9 @@ class Users_page(Base_page):
     def usr_RemitCenter_click(self):
         self.driver.find_element(By.XPATH, self.usr_RemitCenter_click_xpath).click()
         select = Select(self.driver.find_element(By.XPATH, self.usr_RemitCenter_click_xpath))
-        select.select_by_value("Newyork")
+        select.select_by_value("Newyork center")
         print("selected item - " + select.first_selected_option.text)
-        assert "Newyork" in select.first_selected_option.text
+        assert "Newyork center" in select.first_selected_option.text
 
     def usr_Role_click(self):
         self.driver.find_element(By.XPATH, self.usr_Role_click_xpath).click()
@@ -225,9 +225,9 @@ class Users_page(Base_page):
     def usr_eRemitCenter_click(self):
         self.driver.find_element(By.XPATH, self.usr_RemitCenter_click_xpath).click()
         select = Select(self.driver.find_element(By.XPATH, self.usr_RemitCenter_click_xpath))
-        select.select_by_value("Newyork")
+        select.select_by_value("Newyork center")
         print("selected item - " + select.first_selected_option.text)
-        assert "Newyork" in select.first_selected_option.text
+        assert "Newyork center" in select.first_selected_option.text
 
     def usr_eRole_click(self):
         self.driver.find_element(By.XPATH, self.usr_Role_click_xpath).click()
